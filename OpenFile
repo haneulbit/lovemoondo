@@ -1,0 +1,11 @@
+private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "이미지 파일(*.jpg)|*.jpg|이미지 파일(*.png)|*.png|모든 파일(*.*)|*.*";
+            openFileDialog1.Title = "이미지 불러오기";
+            openFileDialog1.FileName = "";
+            openFileDialog1.InitialDirectory = "D:\\";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+            }
+        }
